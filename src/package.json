@@ -1,0 +1,31 @@
+{
+  "name": "cinesecretary",
+  "version": "1.0.0",
+  "description": "Personal tool for keeping track of where one is at with video watching",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelinjurious/CineSecretary.git"
+  },
+  "keywords": [
+    "cinesecretary",
+    "video",
+    "binge-watching",
+    "film"
+  ],
+  "author": "BS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelinjurious/CineSecretary/issues"
+  },
+  "homepage": "https://github.com/angelinjurious/CineSecretary#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "nodemon": "^1.18.7"
+  }
+}
