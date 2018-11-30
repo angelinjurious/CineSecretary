@@ -30,10 +30,10 @@ let CineTitle = (function() {
     }
 })();
 
-let Animal = (function(CineTitle) {
+let HillHouseTitle = (function(CineTitle) {
   const Private = new WeakMap();
   return class CineTitleExtension extends CineTitle {
-    constructor(name, job) {
+    constructor(season, episode, elapsedTime) {
       super(name);
       Private.set(this, { job });
     }
@@ -44,9 +44,9 @@ let Animal = (function(CineTitle) {
     // since NamedThing has it's own WeakMap, separate from this one
     getNameFromHere() { return Private.get(this).name; }
   }
-})(CineTitle);
+})(HillHouseTitle);  // })(CineTitle);
 
-const presto = new Animal('Presto', 'Digger');
+const presto = new HillHouseTitle('Presto', 'Digger');
 console.log(presto instanceof CineTitle); // true
 console.log(presto.getName());             // Presto
 console.log(presto.name);                  // undefined
