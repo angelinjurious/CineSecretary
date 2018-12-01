@@ -101,3 +101,18 @@ let HillHouseTitle = (function(CineTitle) {
   console.log(presto.getJob());              // Digger
   presto.setJob('Bone Finder');
   console.log(presto.getJob());              // Bone Finder
+
+
+
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  
+const presto = new HillHouseTitle('Presto', 'Digger');
+console.log(presto instanceof CineTitle); // true
+console.log(presto.getName());             // Presto
+console.log(presto.name);                  // undefined
+console.log(presto.getNameFromHere())      // undefined
+console.log(presto instanceof Animal);     // true
+console.log(presto.getJob());              // Digger
+presto.setJob('Bone Finder');
+console.log(presto.getJob());              // Bone Finder

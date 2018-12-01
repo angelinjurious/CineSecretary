@@ -33,15 +33,21 @@ let CineTitle = (function() {
 let HillHouseTitle = (function(CineTitle) {
   const Private = new WeakMap();
   return class CineTitleExtension extends CineTitle {
-    constructor(season, episode, elapsedTime) {
-      super(name);
-      Private.set(this, { job });
+    constructor(
+        { 
+            season, 
+            episode, 
+            elapsedTime
+        } = {}
+    )
+      
+        super(title, isFilm);
+        Private.set(this, {  });
     }
     getJob() { return Private.get(this).job; }
     setJob(job) { Private.get(this).job = job; }
 
-    // Just for exposition: this should always return undefined,
-    // since NamedThing has it's own WeakMap, separate from this one
+     // since NamedThing has it's own WeakMap, separate from this one
     getNameFromHere() { return Private.get(this).name; }
   }
 })(HillHouseTitle);  // })(CineTitle);

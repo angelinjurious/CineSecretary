@@ -4,14 +4,15 @@
 let CineTitle = (function() {
     const Private = new WeakMap();
     return class CineTitle {
-        constructor( 
+        constructor ( 
             {
                 title       = '(no title)', 
                 isFilm      = false, 
                 season      = 'S01', 
                 episode     = 'E01', 
                 elapsedTime = new Date()
-                } = {}) 
+                    } = {}
+                ) 
             {
             Private.set(this, { title });
             Private.set(this, { isFilm });
