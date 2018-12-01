@@ -1,6 +1,5 @@
 // 
 // app.js
 // 
-const globals = require('./_globals');
-console.log(globals.APP_NAME);
-console.log(globals.APP_NAME_FRIENDLY);
+const tests = require('./tests/__all-tests');
+tests.run_tests();

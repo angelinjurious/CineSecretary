@@ -3,14 +3,16 @@
 // 
 let TestingContextFactory = () => {
 
+    // private property backing 
     const privates = new WeakMap();
 
+    // public class
     return class TestingContext {
         constructor( 
             { 
                 title       = '', 
                 isFilm      = false, 
-                season      = 'S01', 6
+                season      = 'S01', 
                 episode     = 'E01', 
                 timeElapsed = new Date() 
             } = {} 

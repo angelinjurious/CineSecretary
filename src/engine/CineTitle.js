@@ -1,8 +1,12 @@
 //
 // CineTitle.js
-//
+// 
 let CineTitle = (function() {
+
+    // private property backing store
     const Private = new WeakMap();
+
+    // public class
     return class CineTitle {
         constructor ( 
             {
@@ -23,47 +27,28 @@ let CineTitle = (function() {
     
         //
         // title
-        get Title() {
-            return Private.get(this).title;
-        }
-        set Title(title) {
-            Private.get(this).title = title;
-        }
+        getTitle() { return Private.get(this).title; }
+        setTitle(title) { Private.get(this).title = title; }
 
         //
         // isFilm
-        get IsFilm() {
-            return Private.get(this).isFilm;
-        }
-        set IsFilm(isFilm) {
-            Private.get(this).isFilm= isFilm;
-        }
+        getIsFilm() { return Private.get(this).isFilm; }
+        setIsFilm(isFilm) { Private.get(this).isFilm = isFilm; }
 
         //
         // season
-        get Season() {
-            return Private.get(this).season;
-        }
-        set Season(season) {
-            Private.get(this).season = season;
-        }
+        getSeason() { return Private.get(this).season; }
+        setSeason(season) { Private.get(this).season = season; }
 
         //
         // episode
-        get Episode() {
-            return Private.get(this).episode;
-        }
-        set Episode(episode) {
-            Private.get(this).episode = episode;
-        }
+        getEpisode() { return Private.get(this).episode; }
+        setEpisode(episode) { Private.get(this).episode = episode; }
 
         //
         // elapsedTime
-        get ElapsedTime() {
-            return Private.get(this).elapsedTime;
-        }
-        set ElapsedTime (elapsedTime) {
-            Private.get(this).elapsedTime = elapsedTime;
-        }
+        getElapsedTime() { return Private.get(this).elapsedTime; }
+        setElapsedTime(elapsedTime) { Private.get(this).elapsedTime = elapsedTime; }
+        
     }
 })();
