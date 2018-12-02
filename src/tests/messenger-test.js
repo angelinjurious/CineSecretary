@@ -2,13 +2,16 @@
 // messenger-test.js
 // 
 const testerFn = context => {
+
+    if ( context === undefined ) {
+        //throw new ReferenceError('Test requires TestingContext.');
+    }
     
     // const events = require('events');
     // class EventsEmitter extends events {}
     // const emitter = new EventsEmitter();
     // emitter.on()
 
-    console.log('In test.');
 
 
 };
