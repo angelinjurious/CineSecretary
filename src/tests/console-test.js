@@ -1,7 +1,11 @@
 // 
 // console-test.js
 // 
-const tester = () => {
+const tester = ( context ) => {
+
+    if ( context === undefined ) {
+        throw new ReferenceError('Test requires TestingContext.');
+    }
 
     console.log('Console Test');
 

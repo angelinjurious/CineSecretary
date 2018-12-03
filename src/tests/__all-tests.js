@@ -20,15 +20,24 @@ const testerFn = () => {
         }
     );
 
+    // set up testing context
+    const context = require('./framework/TestingContext');
+    context.messenger.message('this is a message!');
+
     // run the tests
+    console.log('** STARTING TESTS **');
+    console.log(('~').repeat(40));
     testFiles.forEach(
         f => {
             console.log(`Loading test (${f})...`)
             const test = require(f);
             console.log(`Running test: ${test.test_name}`)
-            test.run_test();
+            test.run_test( context );
+            console.log(`Completed test: ${test.test_name}`);
+            console.log(('~').repeat(40));
         }
     );
+    console.log('** COMPLETED TESTS **');
 
 };
 
