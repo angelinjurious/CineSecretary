@@ -13,10 +13,13 @@ const tester = ( context ) => {
         + 'text-decoration: underline'
         );
 
+    
+
 };
 
 module.exports = {
     run_test:   tester, 
     test_name:  'Console Test',
-    is_async:   false
+    is_async:   false,
+    enabled:    false,
 };

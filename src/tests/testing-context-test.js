@@ -4,12 +4,12 @@
 const testerFn = ( context ) => {
 
     if ( context === undefined ) {
-        throw new ReferenceError('TestingContext must be supplied.');
+        throw new ReferenceError('Test requires TestingContext.');
     }
  
     context.messenger.info('Creating %cinfo!', 'font-weight: bold; color: green;');
     context.messenger.message('Created message!');
-    context.messenger.error('%sCreated error!', 
+    context.messenger.error('%cCreated error!', 
         'color:red; font-weight: bold;');
     
 };
@@ -17,5 +17,6 @@ const testerFn = ( context ) => {
 module.exports = {
     run_test:   testerFn,
     test_name:  'Testing Context Test',
-    is_async:   false
+    is_async:   false,
+    enabled:    false,
 };

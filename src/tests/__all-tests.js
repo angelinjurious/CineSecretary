@@ -22,19 +22,30 @@ const testerFn = () => {
 
     // set up testing context
     const context = require('./framework/TestingContext');
-    context.messenger.message('this is a message!');
+
+    // flag to output anything if test is disabled
+    const outputIfDisabled = false;
 
     // run the tests
     console.log('** STARTING TESTS **');
-    console.log(('~').repeat(40));
+    console.log(('=').repeat(40));
     testFiles.forEach(
         f => {
-            console.log(`Loading test (${f})...`)
+            // console.log(`Loading test (${f})...`)
             const test = require(f);
-            console.log(`Running test: ${test.test_name}`)
-            test.run_test( context );
-            console.log(`Completed test: ${test.test_name}`);
-            console.log(('~').repeat(40));
+            if ( test.enabled ) {
+                console.log(`Loading test (${f})...`)
+                console.log(`Running test: ${test.test_name}`)
+                test.run_test( context );
+                console.log(`Completed test: ${test.test_name}`);
+                console.log(('=').repeat(40));
+            }
+            else {
+                if ( outputIfDisabled ) {
+                    console.log(`Test disabled: ${test.test_name}`)
+                    console.log(('=').repeat(40));
+                }
+            }
         }
     );
     console.log('** COMPLETED TESTS **');

@@ -4,6 +4,7 @@
 let CineTitleFactory = (function() {
 
     // privates property backing store
+    const _privates = {};
     const privates = new WeakMap();
 
     // public class
@@ -18,37 +19,37 @@ let CineTitleFactory = (function() {
             } = {}
         ) 
             {
-                privates.set(this, { title });
-                privates.set(this, { isFilm });
-                privates.set(this, { season });
-                privates.set(this, { episode });
-                privates.set(this, { elapsedTime });
+                _privates.title         = title;
+                _privates.isFilm        = isFilm;
+                _privates.season        = season;
+                _privates.episode       = episode;
+                _privates.elapsedTime   = elapsedTime;
             }
     
         //
         // title
-        getTitle() { return privates.get(this).title; }
-        setTitle(title) { privates.get(this).title = title; }
+        getTitle() { return _privates.title; }
+        setTitle(title) { _privates.title = title; }
 
         //
         // isFilm
-        getIsFilm() { return privates.get(this).isFilm; }
-        setIsFilm(isFilm) { privates.get(this).isFilm = isFilm; }
+        getIsFilm() { return _privates.isFilm; }
+        setIsFilm(isFilm) { _privates.isFilm = isFilm; }
 
         //
         // season
-        getSeason() { return privates.get(this).season; }
-        setSeason(season) { privates.get(this).season = season; }
+        getSeason() { return _privates.season; }
+        setSeason(season) { _privates.season = season; }
 
         //
         // episode
-        getEpisode() { return privates.get(this).episode; }
-        setEpisode(episode) { privates.get(this).episode = episode; }
+        getEpisode() { return _privates.episode; }
+        setEpisode(episode) { _privates.episode = episode; }
 
         //
         // elapsedTime
-        getElapsedTime() { return privates.get(this).elapsedTime; }
-        setElapsedTime(elapsedTime) { privates.get(this).elapsedTime = elapsedTime; }
+        getElapsedTime() { return _privates.elapsedTime; }
+        setElapsedTime(elapsedTime) { _privates.elapsedTime = elapsedTime; }
         
     }
 })();

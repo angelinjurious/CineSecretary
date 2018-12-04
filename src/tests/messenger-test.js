@@ -29,5 +29,6 @@ const testerFn = context => {
 module.exports = {
     run_test:   testerFn,
     test_name:  'Test Context Messenger Test',
-    is_async:   false
+    is_async:   false,
+    enabled:    false,
 };
