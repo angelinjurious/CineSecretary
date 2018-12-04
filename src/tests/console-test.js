@@ -7,7 +7,11 @@ const tester = ( context ) => {
         throw new ReferenceError('Test requires TestingContext.');
     }
 
-    console.log('Console Test');
+    console.log('Console Test: %cThis should be styled.', 
+        'color: green; '
+        + 'font-weight: bold; '
+        + 'text-decoration: underline'
+        );
 
 };
 

@@ -11,14 +11,34 @@ const messengerFn = () => {
     //
     // create message event handler
     const messageHandler = ( msg ) => {
-        console.log(`From message event handler: ${msg}`);
+        console.log(`TestingContext info: ${msg}`);
     };
     eventsEmitter.on('message', messageHandler);
 
     //
     // create info event handler
-    const infoHandler = ( msg ) => {
-        console.info(`TestingContext: ${msg}`);
+    const infoHandler = ( msg, styles ) => {
+ 
+        let isStyles = false;
+        // if ( styles === undefined ) {
+        //     styles = '';
+        //     isStyles = true;
+        // }
+
+        // const m = 'TestingContext message: ';
+        // if ( isStyles ) {
+        //     m += 
+        // }
+        // ${msg}`;
+
+        const m = 'TestingContext message: ' + `${msg}`;
+        console.info('~'.repeat( m.length ));
+        if ( isStyles ) {
+            console.info( m, styles );
+        } else {
+            console.info( m );
+        }
+        console.info('~'.repeat(m.length));
     };
     eventsEmitter.on('info', infoHandler);
 

@@ -7,8 +7,10 @@ const testerFn = ( context ) => {
         throw new ReferenceError('TestingContext must be supplied.');
     }
  
-    context.messenger.message('Creating context...');
-    context.messenger.message('Created context!');
+    context.messenger.info('Creating %cinfo!', 'font-weight: bold; color: green;');
+    context.messenger.message('Created message!');
+    context.messenger.error('%sCreated error!', 
+        'color:red; font-weight: bold;');
     
 };
 
