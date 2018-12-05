@@ -58,5 +58,5 @@ module.exports = {
     run_test:   testerFn,
     test_name:  'CineTitle Class Test',
     is_async:   false,
-    enabled:    true,
+    enabled:    false,
 }
