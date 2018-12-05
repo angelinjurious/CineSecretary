@@ -1,5 +1,12 @@
-// 
 // cinetitle-test.js
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~/tests/
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  3 December 2018
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  BS
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // 
 const testerFn = ( context ) => {
 
@@ -8,7 +15,7 @@ const testerFn = ( context ) => {
     }
 
     context.current_test_name = 'CineTitle Class Test';
-    context.is_current_test_started = false;
+    context.is_current_test_started = true;
 
     //
     // default constructor test

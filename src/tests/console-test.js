@@ -1,11 +1,20 @@
-// 
 // console-test.js
-// 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~/tests/
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  3 December 2018
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  BS
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 const tester = ( context ) => {
 
     if ( context === undefined ) {
         throw new ReferenceError('Test requires TestingContext.');
     }
+    
+    context.current_test_name = 'Console Test';
+    context.is_current_test_started = true;
 
     console.log('Console Test: %cThis should be styled.', 
         'color: green; '
@@ -13,7 +22,7 @@ const tester = ( context ) => {
         + 'text-decoration: underline'
         );
 
-    
+    context.is_current_test_completed = true;
 
 };
 

@@ -1,6 +1,14 @@
-// 
 // messenger.js
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~/tests/framework/
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  3 December 2018
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  BS
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // 
+
+
 const messengerFn = () => {
     
     //
@@ -20,16 +28,6 @@ const messengerFn = () => {
     const infoHandler = ( msg, styles ) => {
  
         let isStyles = false;
-        // if ( styles === undefined ) {
-        //     styles = '';
-        //     isStyles = true;
-        // }
-
-        // const m = 'TestingContext message: ';
-        // if ( isStyles ) {
-        //     m += 
-        // }
-        // ${msg}`;
 
         const m = 'TestingContext message: ' + `${msg}`;
         console.info('~'.repeat( m.length ));

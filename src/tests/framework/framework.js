@@ -1,9 +1,20 @@
-// 
-// __framework.js
-// 
-function testingContextFactory() {
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// framework.js
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~/tests/framework/
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  3 December 2018
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  BS
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+const testingContextFactory = () => {
     
     return {
-        thing:  'stuff'
-    }
-}
+
+
+    };
+
+};
+
+module.exports = testingContextFactory;
